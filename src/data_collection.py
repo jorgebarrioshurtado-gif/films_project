@@ -1,5 +1,5 @@
 import requests
-
+import time
 from dotenv import load_dotenv
 import os
 
@@ -29,14 +29,24 @@ def get_movie_keywords(tmdb_id, api_key = api_key):
 def enrich_film(tmdb_id, api_key = api_key):
     base = "https://api.themoviedb.org/3/movie"
     
-    details = requests.get(f"{base}/{tmdb_id}", 
-                          params={"api_key": api_key}).json()
-    #keywords = requests.get(f"{base}/{tmdb_id}/keywords",
-                           #params={"api_key": api_key}).json()
+    for attempt in range(3):  # try up to 3 times
+        response = requests.get(f"{base}/{tmdb_id}", 
+                               params={"api_key": api_key},
+                               timeout=10)
+        
+        if response.status_code == 200:
+            details = response.json()
+            return {
+                'tmdb_id': tmdb_id,
+                'budget': details.get('budget'),
+                'revenue': details.get('revenue')
+            }
+        elif response.status_code == 429:
+            print(f"Rate limit hit — waiting 10 seconds")
+            time.sleep(10)
+        else:
+            print(f"Error {response.status_code} on tmdb_id {tmdb_id}")
+            return {'tmdb_id': tmdb_id, 'budget': None, 'revenue': None}
     
-    return {
-        'tmdb_id': tmdb_id,
-        'budget': details.get('budget'),
-        'revenue': details.get('revenue'),
-        #'keywords': [k['name'] for k in keywords.get('keywords', [])]
-    }
+    # If all 3 attempts fail
+    return {'tmdb_id': tmdb_id, 'budget': None, 'revenue': None}
