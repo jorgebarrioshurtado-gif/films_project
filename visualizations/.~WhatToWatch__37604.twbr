@@ -21,7 +21,7 @@
     <WorksheetBackgroundTransparency />
     <ZoneBackgroundTransparency />
   </document-format-change-manifest>
-  <repository-location derived-from='https://public.tableau.com/workbooks/FindFilms?rev=1.3' id='FindFilms' path='/workbooks' revision='1.6' />
+  <repository-location derived-from='https://public.tableau.com/workbooks/FindFilms?rev=1.3' id='FindFilms' path='/workbooks' revision='1.7' />
   <preferences>
     <preference name='ui.encoding.shelf.height' value='24' />
     <preference name='ui.shelf.height' value='26' />
@@ -530,7 +530,7 @@
         </groupfilter>
       </group>
       <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
-        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='Data/tableau-temp/#TableauTemp_13un8kv0mgwgex1fkigvq1bfkq57.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='05/23/2026 03:09:35 PM' username='tableau_internal_user'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='Data/tableau-temp/#TableauTemp_13un8kv0mgwgex1fkigvq1bfkq57.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
           <relation type='collection'>
             <relation name='film_main_info.csv_D7A4658B83524096B5C8581A4B8FA68A' table='[Extract].[film_main_info.csv_D7A4658B83524096B5C8581A4B8FA68A]' type='table' />
             <relation name='film_genres.csv_2B1C494995A7440C8F44B5087A404329' table='[Extract].[film_genres.csv_2B1C494995A7440C8F44B5087A404329]' type='table' />
@@ -570,7 +570,6 @@
               <approx-count>70475</approx-count>
               <contains-null>true</contains-null>
               <collation flag='0' name='LEN_RUS' />
-              <object-id>[film_main_info.csv_D7A4658B83524096B5C8581A4B8FA68A]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>title</remote-name>
@@ -585,7 +584,6 @@
               <approx-count>70475</approx-count>
               <contains-null>true</contains-null>
               <collation flag='0' name='LEN_RUS' />
-              <object-id>[film_main_info.csv_D7A4658B83524096B5C8581A4B8FA68A]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>year</remote-name>
@@ -599,7 +597,6 @@
               <aggregation>Sum</aggregation>
               <approx-count>163</approx-count>
               <contains-null>true</contains-null>
-              <object-id>[film_main_info.csv_D7A4658B83524096B5C8581A4B8FA68A]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>runtime_min</remote-name>
@@ -613,7 +610,6 @@
               <aggregation>Sum</aggregation>
               <approx-count>336</approx-count>
               <contains-null>true</contains-null>
-              <object-id>[film_main_info.csv_D7A4658B83524096B5C8581A4B8FA68A]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>budget</remote-name>
@@ -627,7 +623,6 @@
               <aggregation>Sum</aggregation>
               <approx-count>785</approx-count>
               <contains-null>true</contains-null>
-              <object-id>[film_main_info.csv_D7A4658B83524096B5C8581A4B8FA68A]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>revenue</remote-name>
@@ -641,7 +636,6 @@
               <aggregation>Sum</aggregation>
               <approx-count>10365</approx-count>
               <contains-null>true</contains-null>
-              <object-id>[film_main_info.csv_D7A4658B83524096B5C8581A4B8FA68A]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>avg_rating</remote-name>
@@ -655,7 +649,6 @@
               <aggregation>Sum</aggregation>
               <approx-count>111</approx-count>
               <contains-null>true</contains-null>
-              <object-id>[film_main_info.csv_D7A4658B83524096B5C8581A4B8FA68A]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>num_votes</remote-name>
@@ -669,7 +662,6 @@
               <aggregation>Sum</aggregation>
               <approx-count>11917</approx-count>
               <contains-null>true</contains-null>
-              <object-id>[film_main_info.csv_D7A4658B83524096B5C8581A4B8FA68A]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>rating</remote-name>
@@ -683,7 +675,6 @@
               <aggregation>Sum</aggregation>
               <approx-count>5</approx-count>
               <contains-null>true</contains-null>
-              <object-id>[film_main_info.csv_D7A4658B83524096B5C8581A4B8FA68A]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>dubious</remote-name>
@@ -697,7 +688,6 @@
               <aggregation>Sum</aggregation>
               <approx-count>3</approx-count>
               <contains-null>true</contains-null>
-              <object-id>[film_main_info.csv_D7A4658B83524096B5C8581A4B8FA68A]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>imdb_id</remote-name>
@@ -712,7 +702,6 @@
               <approx-count>128000</approx-count>
               <contains-null>true</contains-null>
               <collation flag='0' name='LEN_RUS' />
-              <object-id>[film_genres.csv_2B1C494995A7440C8F44B5087A404329]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>genre</remote-name>
@@ -727,7 +716,6 @@
               <approx-count>42</approx-count>
               <contains-null>true</contains-null>
               <collation flag='0' name='LEN_RUS' />
-              <object-id>[film_genres.csv_2B1C494995A7440C8F44B5087A404329]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>imdb_id</remote-name>
@@ -742,7 +730,6 @@
               <approx-count>95496</approx-count>
               <contains-null>true</contains-null>
               <collation flag='0' name='LEN_RUS' />
-              <object-id>[film_genres.csv_63DFBCF945F041C7B54A99A4DA8ABCEF]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>genre</remote-name>
@@ -757,7 +744,6 @@
               <approx-count>42</approx-count>
               <contains-null>true</contains-null>
               <collation flag='0' name='LEN_RUS' />
-              <object-id>[film_genres.csv_63DFBCF945F041C7B54A99A4DA8ABCEF]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>imdb_id</remote-name>
@@ -772,7 +758,6 @@
               <approx-count>38373</approx-count>
               <contains-null>true</contains-null>
               <collation flag='0' name='LEN_RUS' />
-              <object-id>[user_ratings.csv_AA45F9F54490445CB7A5A1EF818A9E10]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>user_id</remote-name>
@@ -786,7 +771,6 @@
               <aggregation>Sum</aggregation>
               <approx-count>776934</approx-count>
               <contains-null>true</contains-null>
-              <object-id>[user_ratings.csv_AA45F9F54490445CB7A5A1EF818A9E10]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>rating</remote-name>
@@ -800,7 +784,6 @@
               <aggregation>Sum</aggregation>
               <approx-count>11</approx-count>
               <contains-null>true</contains-null>
-              <object-id>[user_ratings.csv_AA45F9F54490445CB7A5A1EF818A9E10]</object-id>
             </metadata-record>
           </metadata-records>
         </connection>
@@ -4593,8 +4576,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='1800' minheight='1800' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='36' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98066' id='35' param='vert' type-v2='layout-flow' w='98632' x='684' y='967'>
+            <zone h='100000' id='40' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98066' id='39' param='vert' type-v2='layout-flow' w='98632' x='684' y='967'>
                 <zone forceUpdate='true' h='4595' id='3' type-v2='text' w='86741' x='684' y='967'>
                   <formatted-text>
                     <run fontalignment='1' fontname='Tableau Bold' fontsize='18'>Why is the bechdel test important?</run>
@@ -4827,9 +4810,9 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='1900' minheight='1900' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='42' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98066' id='41' param='vert' type-v2='layout-flow' w='98632' x='684' y='967'>
-                <zone forceUpdate='true' h='3827' id='20' type-v2='text' w='89991' x='684' y='967'>
+            <zone h='100000' id='46' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98066' id='45' param='vert' type-v2='layout-flow' w='98632' x='684' y='967'>
+                <zone forceUpdate='true' h='3825' id='20' type-v2='text' w='89987' x='684' y='967'>
                   <formatted-text>
                     <run fontalignment='1' fontname='Tableau Bold' fontsize='18'>My dataset</run>
                   </formatted-text>
@@ -4841,7 +4824,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='74' h='10200' id='21' is-fixed='true' name='kpi_count_films' w='17581' x='684' y='4794'>
+                <zone fixed-size='74' h='10197' id='21' is-fixed='true' name='kpi_count_films' w='17577' x='684' y='4792'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='solid' />
@@ -4850,7 +4833,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='74' h='10200' id='23' is-fixed='true' name='kpi_number_genres' w='15011' x='18265' y='4794'>
+                <zone fixed-size='74' h='10197' id='23' is-fixed='true' name='kpi_number_genres' w='15011' x='18261' y='4792'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='solid' />
@@ -4859,7 +4842,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='74' h='10200' id='24' is-fixed='true' name='kpi_range_years' w='25227' x='33276' y='4794'>
+                <zone fixed-size='74' h='10197' id='24' is-fixed='true' name='kpi_range_years' w='25227' x='33272' y='4792'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='solid' />
@@ -4868,7 +4851,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='74' h='10200' id='22' is-fixed='true' name='kpi_films_votes' w='32172' x='58503' y='4794'>
+                <zone fixed-size='74' h='10197' id='22' is-fixed='true' name='kpi_films_votes' w='32172' x='58499' y='4792'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='solid' />
@@ -4877,7 +4860,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='280' h='43213' id='18' is-fixed='true' name='genre_dist (2)' w='32081' x='684' y='14994'>
+                <zone fixed-size='280' h='43215' id='18' is-fixed='true' name='genre_dist (2)' w='32077' x='684' y='14989'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -4886,7 +4869,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone h='7859' id='19' name='genre_dist (2)' pane-specification-id='0' param='[federated.109y9fy1uy51vr145s5zb0eph320].[cnt:imdb_id:qk]' type-v2='color' w='8641' x='90675' y='8947'>
+                <zone h='7859' id='19' name='genre_dist (2)' pane-specification-id='0' param='[federated.109y9fy1uy51vr145s5zb0eph320].[cnt:imdb_id:qk]' type-v2='color' w='8645' x='90671' y='967'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -4895,7 +4878,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='280' h='35834' id='14' is-fixed='true' name='budget_vs_revenue_time' w='57910' x='32765' y='14994'>
+                <zone fixed-size='280' h='35834' id='14' is-fixed='true' name='budget_vs_revenue_time' w='57910' x='32761' y='14989'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -4904,7 +4887,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone h='7980' id='16' name='budget_vs_revenue_time' pane-specification-id='3' param='[federated.109y9fy1uy51vr145s5zb0eph320].[:Measure Names]' type-v2='color' w='8641' x='90675' y='967'>
+                <zone h='7013' id='16' name='budget_vs_revenue_time' pane-specification-id='3' param='[federated.109y9fy1uy51vr145s5zb0eph320].[:Measure Names]' type-v2='color' w='11976' x='36014' y='20435'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -4913,7 +4896,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone h='8343' id='30' name='rating_year' param='[federated.109y9fy1uy51vr145s5zb0eph320].[none:year:qk]' type-v2='filter' values='database' w='8641' x='90675' y='16806'>
+                <zone h='8343' id='30' name='rating_year' param='[federated.109y9fy1uy51vr145s5zb0eph320].[none:year:qk]' type-v2='filter' values='database' w='14371' x='84089' y='12696'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -4922,7 +4905,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='191' h='24049' id='10' is-fixed='true' name='rating_year' w='57910' x='32765' y='50828'>
+                <zone fixed-size='191' h='24051' id='10' is-fixed='true' name='rating_year' w='57910' x='32761' y='50823'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -4931,7 +4914,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='280' h='40826' id='28' is-fixed='true' name='year_dist' w='32081' x='684' y='58207'>
+                <zone fixed-size='280' h='40829' id='28' is-fixed='true' name='year_dist' w='32077' x='684' y='58204'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -4940,7 +4923,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='192' h='24156' id='12' is-fixed='true' name='runtime_year' w='57910' x='32765' y='74877'>
+                <zone fixed-size='192' h='24159' id='12' is-fixed='true' name='runtime_year' w='57910' x='32761' y='74874'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -5122,8 +5105,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='1250' minheight='1250' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='39' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98066' id='38' param='vert' type-v2='layout-flow' w='98632' x='684' y='967'>
+            <zone h='100000' id='43' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98066' id='42' param='vert' type-v2='layout-flow' w='98632' x='684' y='967'>
                 <zone forceUpdate='true' h='3309' id='13' type-v2='text' w='84945' x='684' y='967'>
                   <formatted-text>
                     <run fontalignment='1' fontname='Tableau Bold' fontsize='18'>Genre DNA</run>
@@ -5136,7 +5119,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone h='22430' id='32' mode='checkdropdown' name='dna_genres (2)' param='[federated.109y9fy1uy51vr145s5zb0eph320].[genre (group)]' type-v2='filter' w='13687' x='85629' y='54170'>
+                <zone h='19952' id='32' mode='checkdropdown' name='dna_genres (2)' param='[federated.109y9fy1uy51vr145s5zb0eph320].[genre (group)]' type-v2='filter' w='13687' x='85629' y='79081'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -5154,7 +5137,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone h='22433' id='33' name='dna_genres (2)' pane-specification-id='0' param='[federated.109y9fy1uy51vr145s5zb0eph320].[genre (group)]' type-v2='color' w='13687' x='85629' y='76600'>
+                <zone fixed-size='239' h='29867' id='33' name='dna_genres (2)' pane-specification-id='0' param='[federated.109y9fy1uy51vr145s5zb0eph320].[genre (group)]' type-v2='color' w='13687' x='85629' y='967'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -5163,7 +5146,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone h='8343' id='16' name='runtime_dist_genre' param='[federated.109y9fy1uy51vr145s5zb0eph320].[none:Runtime Min (bin):qk]' show-domain='false' show-null-ctrls='false' type-v2='filter' w='13687' x='85629' y='967'>
+                <zone h='8343' id='16' name='runtime_dist_genre' param='[federated.109y9fy1uy51vr145s5zb0eph320].[none:Runtime Min (bin):qk]' show-domain='false' show-null-ctrls='false' type-v2='filter' w='13687' x='85629' y='30834'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -5172,7 +5155,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone h='22430' id='17' mode='checkdropdown' name='runtime_dist_genre' param='[federated.109y9fy1uy51vr145s5zb0eph320].[none:genre:nk]' type-v2='filter' w='13687' x='85629' y='9310'>
+                <zone h='19952' id='17' mode='checkdropdown' name='runtime_dist_genre' param='[federated.109y9fy1uy51vr145s5zb0eph320].[none:genre:nk]' type-v2='filter' w='13687' x='85629' y='39177'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -5190,7 +5173,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone h='22430' id='19' mode='checkdropdown' name='genre_pairs' param='[federated.109y9fy1uy51vr145s5zb0eph320].[none:Calculation_2694839048417280:nk]' type-v2='filter' w='13687' x='85629' y='31740'>
+                <zone h='19952' id='19' mode='checkdropdown' name='genre_pairs' param='[federated.109y9fy1uy51vr145s5zb0eph320].[none:Calculation_2694839048417280:nk]' type-v2='filter' w='13687' x='85629' y='59129'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -5383,11 +5366,14 @@
       </zones>
       <devicelayouts>
         <devicelayout auto-generated='true' name='Phone'>
-          <size maxheight='1450' minheight='1450' sizing-mode='vscroll' />
+          <size maxheight='1350' minheight='1350' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='26' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98066' id='25' param='vert' type-v2='layout-flow' w='98632' x='684' y='967'>
-                <zone h='31439' id='13' mode='checkdropdown' name='bechdel_budget_genre' param='[federated.109y9fy1uy51vr145s5zb0eph320].[genre (group)]' type-v2='filter' w='13687' x='85629' y='16806'>
+            <zone h='100000' id='32' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98066' id='31' param='vert' type-v2='layout-flow' w='98632' x='684' y='967'>
+                <zone h='13906' id='27' type-v2='text' w='98632' x='684' y='967'>
+                  <formatted-text>
+                    <run>bechdel</run>
+                  </formatted-text>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -5396,7 +5382,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='280' h='55018' id='3' is-fixed='true' name='bechdel_budget_genre' w='42430' x='684' y='967'>
+                <zone h='31439' id='13' mode='checkdropdown' name='bechdel_budget_genre' param='[federated.109y9fy1uy51vr145s5zb0eph320].[genre (group)]' type-v2='filter' w='13687' x='85629' y='30712'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -5405,7 +5391,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone h='7980' id='8' name='bechdel_budget_genre' pane-specification-id='0' param='[federated.109y9fy1uy51vr145s5zb0eph320].[Rating_bechdel (group)]' type-v2='color' w='13687' x='85629' y='967'>
+                <zone fixed-size='224' h='28053' id='3' is-fixed='true' name='bechdel_budget_genre' w='42430' x='684' y='14873'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -5414,7 +5400,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='280' h='55018' id='9' is-fixed='true' name='bechdel_genre' w='42515' x='43114' y='967'>
+                <zone h='7980' id='8' name='bechdel_budget_genre' pane-specification-id='0' param='[federated.109y9fy1uy51vr145s5zb0eph320].[Rating_bechdel (group)]' type-v2='color' w='13687' x='85629' y='14873'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -5423,7 +5409,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone h='7859' id='10' name='bechdel_genre' pane-specification-id='1' param='[federated.109y9fy1uy51vr145s5zb0eph320].[cnt:imdb_id:qk]' type-v2='color' w='13687' x='85629' y='8947'>
+                <zone fixed-size='224' h='28053' id='9' is-fixed='true' name='bechdel_genre' w='42515' x='43114' y='14873'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -5432,7 +5418,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='280' h='43048' id='11' is-fixed='true' name='std_rating_genre' w='42472' x='684' y='55985'>
+                <zone h='7859' id='10' name='bechdel_genre' pane-specification-id='1' param='[federated.109y9fy1uy51vr145s5zb0eph320].[cnt:imdb_id:qk]' type-v2='color' w='13687' x='85629' y='22853'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -5441,7 +5427,10 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone h='50788' id='20' mode='checkdropdown' name='genre_pairs (3)' param='[federated.109y9fy1uy51vr145s5zb0eph320].[none:Calculation_2694839048417280:nk]' type-v2='filter' w='13687' x='85629' y='48245'>
+                <zone h='28054' id='28' type-v2='text' w='84945' x='684' y='42926'>
+                  <formatted-text>
+                    <run>genre</run>
+                  </formatted-text>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -5450,7 +5439,25 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='280' h='43048' id='19' is-fixed='true' name='genre_pairs (3)' w='42473' x='43156' y='55985'>
+                <zone fixed-size='224' h='28053' id='11' is-fixed='true' name='std_rating_genre' w='42472' x='684' y='70980'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='36882' id='20' mode='checkdropdown' name='genre_pairs (3)' param='[federated.109y9fy1uy51vr145s5zb0eph320].[none:Calculation_2694839048417280:nk]' type-v2='filter' w='13687' x='85629' y='62151'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='224' h='28053' id='19' is-fixed='true' name='genre_pairs (3)' w='42473' x='43156' y='70980'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -6210,7 +6217,7 @@
       </cards>
       <simple-id uuid='{1A941372-C5D4-4EF8-BF98-660B20E695BB}' />
     </window>
-    <window class='dashboard' maximized='true' name='general_info'>
+    <window class='dashboard' name='general_info'>
       <viewpoints>
         <viewpoint name='budget_vs_revenue_time'>
           <zoom type='entire-view' />
@@ -6280,7 +6287,7 @@
       <active id='9' />
       <simple-id uuid='{B514699C-A26B-4BE6-A922-27C396732C64}' />
     </window>
-    <window class='dashboard' name='genre_dna'>
+    <window class='dashboard' maximized='true' name='genre_dna'>
       <viewpoints>
         <viewpoint name='dna_genres (2)'>
           <zoom type='entire-view' />

@@ -5,10 +5,12 @@ import numpy as np
 
 import matplotlib.pyplot as plt
 
-import requests
 import sys
 sys.path.append("../")  
 from src.data_collection import load_details_cache, get_film_details, get_poster_url
+from src.styles import load_css
+
+load_css()
 
 api_key = st.secrets["TMDB_API_KEY"]
 details_cache = load_details_cache()
@@ -17,11 +19,9 @@ details_cache = load_details_cache()
 # ---------------------------------------------------
 # PAGE TITLE
 # ---------------------------------------------------
-st.title("WhatToWatch")
-st.write("""This project is born ...""")
+st.header("🔍 WhatToWatch Recommender")
 
-st.divider()
-
+st.write("Where the magic happens...")
 # ---------------------------------------------------
 # LOAD DATA
 # ---------------------------------------------------
@@ -56,6 +56,7 @@ def random_film(film, how_many = 1, data = data):
             'imdb_id': row['imdb_id'],
             'year': row['year'],
             'imdb_rating': row['avg_rating'],
+            "bechdel_rating" : row['bechdel_rating'],
             'imdb_url': f"https://www.imdb.com/title/{row['imdb_id']}/"
         })
     return recommendations
@@ -77,7 +78,10 @@ def display_recommendations(recommended_films, details_cache = details_cache, ap
                         use_container_width=True)
             
             st.markdown(f"**{film['title']}**")
-            st.markdown(f"{film['year']} · ⭐ {film['imdb_rating']:.1f}")
+            if film["bechdel_rating"] == "Pass":
+                st.markdown(f"{film['year']} · ⭐ {film['imdb_rating']:.1f} · 💜")
+            else:
+                st.markdown(f"{film['year']} · ⭐ {film['imdb_rating']:.1f}")
             
             # Tagline if available
             tagline = details.get('tagline')
@@ -103,26 +107,14 @@ film = st.selectbox("Choose a film",
 
 how_many = st.slider("How many recommendations?",
                               min_value = 1,
-                               max_value = 10,
+                               max_value = 9,
                                value = 3,
                               step = 1)
 
 recommendations = random_film(film, how_many)
 
 
-show_recommendations = st.button("Show recommendations 🔎")
+show_recommendations = st.button("Show recommendations 🔍")
 if show_recommendations:
     #st.write(recommendations)
     display_recommendations(recommendations)
-
-
-
-
-
-# ---------------------------------------------------
-# SIDEBAR FILTERS
-# ---------------------------------------------------
-st.sidebar.header("Filters")
-
-# How many recommendations
-

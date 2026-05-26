@@ -105,7 +105,7 @@ def get_film_details(tmdb_id, api_key, cache):
     
     return details
 
-def get_poster_url(details, size='w342'):
+def get_poster_url(details, size='w500'):
     poster_path = details.get('poster_path')
     if poster_path:
         return f"https://image.tmdb.org/t/p/{size}{poster_path}"

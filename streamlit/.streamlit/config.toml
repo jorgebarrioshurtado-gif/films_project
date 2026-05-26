@@ -1,0 +1,16 @@
+[theme]
+
+# Warm orange accent
+primaryColor="#E89B5F"
+
+# Dark cinematic background
+backgroundColor="#1E1A17"
+
+# Cards/sidebar background
+secondaryBackgroundColor="#2A2522"
+
+# Soft warm text
+textColor="#F5E6D3"
+
+# Font
+font="sans serif"
