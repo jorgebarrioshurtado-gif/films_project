@@ -1,4 +1,5 @@
 import requests
+import json
 import time
 from dotenv import load_dotenv
 import os
@@ -50,3 +51,62 @@ def enrich_film(tmdb_id, api_key = api_key):
     
     # If all 3 attempts fail
     return {'tmdb_id': tmdb_id, 'budget': None, 'revenue': None}
+
+
+cache_file = "../data/processed/tmdb_details_cache.json"
+
+def load_details_cache(cache_file = cache_file):
+    if os.path.exists(cache_file):
+        with open(cache_file, 'r') as f:
+            return json.load(f)
+    return {}
+
+def save_details_cache(cache, cache_file = cache_file):
+    with open(cache_file, 'w') as f:
+        json.dump(cache, f)
+
+def get_film_details(tmdb_id, api_key, cache):
+    tmdb_id_str = str(tmdb_id)
+    
+    # Already in cache — return immediately
+    if tmdb_id_str in cache:
+        return cache[tmdb_id_str]
+    
+    # Not in cache — call API
+    try:
+        response = requests.get(
+            f"https://api.themoviedb.org/3/movie/{tmdb_id}",
+            params={"api_key": api_key},
+            timeout=10
+        )
+        if response.status_code == 200:
+            data = response.json()
+            details = {
+                'poster_path': data.get('poster_path'),
+                'tagline': data.get('tagline'),
+                'overview': data.get('overview')
+            }
+        else:
+            details = {
+                'poster_path': None,
+                'tagline': None,
+                'overview': None
+            }
+    except Exception:
+        details = {
+            'poster_path': None,
+            'tagline': None,
+            'overview': None
+        }
+    
+    # Store and persist regardless of success or failure
+    cache[tmdb_id_str] = details
+    save_details_cache(cache)
+    
+    return details
+
+def get_poster_url(details, size='w342'):
+    poster_path = details.get('poster_path')
+    if poster_path:
+        return f"https://image.tmdb.org/t/p/{size}{poster_path}"
+    return None
