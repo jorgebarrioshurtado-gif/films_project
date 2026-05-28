@@ -12,7 +12,7 @@ from src.styles import load_css
 
 load_css()
 
-BASE_DIR = Path(__file__).resolve().parents[1]
+BASE_DIR = Path(__file__).resolve().parents[2]
 file_path = BASE_DIR / "data" / "visualizations" / "streamlit_data.csv"
 
 api_key = st.secrets["TMDB_API_KEY"]
