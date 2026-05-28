@@ -91,7 +91,7 @@ with col2:
     st.metric("Median Runtime:", f"{median_runtime:,.0f} mins")
 
 with col3:
-    st.metric("Total Films 💜:", b_total_films)
+    st.metric("Total Films 💜*:", b_total_films)
 
 with col4:
     st.metric("Median Runtime 💜:", f"{b_median_runtime:,.0f} mins")
@@ -110,7 +110,7 @@ with col7:
     st.metric("Average Rating 💜:", b_avg_rating)
     
 with col8:
-    st.metric("Years 💜:", f"{b_start_year} - {b_last_year}")
+    st.metric("Years 💜 **:", f"{b_start_year} - {b_last_year}")
 
 st.divider()
 st.subheader("Best rated film:")
@@ -172,12 +172,9 @@ bechdel__film_to_display = info_best_films(best_bechdel)
 display_films(bechdel__film_to_display)
 
 st.divider()
-st.subheader("Films distribution")
+st.caption("\\* Out of the 15.295 films of our catalog, we had the results of the Bechdel test for 6.605. Films that are not considered as a pass can be wether a fail or an unknown result.")
+st.caption("\\*\\* We do not have information about the Bechdel test from 2021. This does not mean there have not been films that pass this test.")
+st.caption("Bechel test is not a quality measure about a film, it is not a indicator of how feminist it is either. It is just a women representation measure.")
+           
 
-fig, ax = plt.subplots(figsize=(10, 4))
 
-sns.histplot(filtered_df["year"], bins=30, ax=ax)
-
-ax.set_title("Films Releases Over Time")
-
-st.pyplot(fig)

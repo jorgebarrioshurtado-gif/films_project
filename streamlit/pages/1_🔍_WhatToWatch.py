@@ -24,6 +24,18 @@ st.set_page_config(
 st.header("🔍 WhatToWatch Recommender")
 
 st.write("Where the magic happens...")
+st.markdown("""
+<div style='
+    background-color: rgba(255, 210, 166, 0.1);
+    border-left: 3px solid #FFD2A6;
+    padding: 0.75rem 1rem;
+    border-radius: 0 8px 8px 0;
+    color: #D8C3B3;
+    font-size: 0.9rem;
+'>
+Note: Films with a 💜 pass the bechdel test
+</div>
+""", unsafe_allow_html=True)
 # ---------------------------------------------------
 # LOAD DATA
 # ---------------------------------------------------

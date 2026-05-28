@@ -53,7 +53,7 @@ with col1:
 
 with col2:
     time = st.pills(label = "Runtime ⏱️", 
-                    options = ["< 60 min", "60-90 min", "90-120 min", "120-180 min", "> 180 min"], 
+                    options = ["< 60 min", "60-90 min", "90-120 min", "120-180 min", "&gt; 180 min"], 
                     selection_mode = "multi")
 
 col3, col4 = st.columns(2)

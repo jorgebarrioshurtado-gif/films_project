@@ -51,7 +51,7 @@ with col1:
     st.markdown("""
     <a href="/WhatToWatch" target="_self" style="text-decoration:none;">
         <div class="nav-card">
-            <div class="icon">🔎</div>
+            <div class="icon">🔍</div>
             <div class="title">Recommender</div>
             <div class="subtitle">
                 Discover movies based on your taste
