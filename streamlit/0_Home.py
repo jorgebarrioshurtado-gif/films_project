@@ -1,8 +1,13 @@
 import streamlit as st
 
 import sys
-sys.path.append("../")
+from pathlib import Path
+
+ROOT_DIR = Path(__file__).resolve().parents[1]
+sys.path.append(str(ROOT_DIR))
+
 from src.styles import load_css
+
 load_css()
 
 st.set_page_config(

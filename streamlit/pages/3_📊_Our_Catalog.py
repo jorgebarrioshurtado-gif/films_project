@@ -3,7 +3,11 @@ import streamlit as st
 import pandas as pd
 
 import sys
-sys.path.append("../")  
+from pathlib import Path
+
+ROOT_DIR = Path(__file__).resolve().parents[1]
+sys.path.append(str(ROOT_DIR))
+
 from src.data_collection import load_details_cache, get_film_details, get_poster_url
 from src.styles import load_css
 
