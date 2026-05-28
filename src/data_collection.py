@@ -3,7 +3,10 @@ import json
 import time
 from dotenv import load_dotenv
 import os
+from pathlib import Path
 
+BASE_DIR = Path(__file__).resolve().parents[1]
+cache_file = BASE_DIR / "data" / "processed" / "tmdb_details_cache.json"
 
 load_dotenv()
 api_key = os.getenv("TMDB_API_KEY")
@@ -52,8 +55,6 @@ def enrich_film(tmdb_id, api_key = api_key):
     # If all 3 attempts fail
     return {'tmdb_id': tmdb_id, 'budget': None, 'revenue': None}
 
-
-cache_file = "../data/processed/tmdb_details_cache.json"
 
 def load_details_cache(cache_file = cache_file):
     if os.path.exists(cache_file):
