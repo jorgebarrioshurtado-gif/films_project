@@ -6,7 +6,7 @@ import os
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parents[1]
-cache_file = BASE_DIR / "data" / "app" / "tmdb_details_cache.json"
+DEFAULT_CACHE_FILE = BASE_DIR / "data" / "app" / "tmdb_details_cache.json"
 
 load_dotenv()
 api_key = os.getenv("TMDB_API_KEY")
@@ -56,13 +56,17 @@ def enrich_film(tmdb_id, api_key = api_key):
     return {'tmdb_id': tmdb_id, 'budget': None, 'revenue': None}
 
 
-def load_details_cache(cache_file = cache_file):
+def load_details_cache(cache_file = None):
+    if cache_file is None:
+        cache_file = DEFAULT_CACHE_FILE
     if os.path.exists(cache_file):
         with open(cache_file, 'r') as f:
             return json.load(f)
     return {}
 
-def save_details_cache(cache, cache_file = cache_file):
+def save_details_cache(cache, cache_file = None):
+    if cache_file is None:
+        cache_file = DEFAULT_CACHE_FILE
     with open(cache_file, 'w') as f:
         json.dump(cache, f)
 
