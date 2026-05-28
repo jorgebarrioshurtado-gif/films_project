@@ -1,13 +1,10 @@
 import streamlit as st
 
 import pandas as pd
-import numpy as np
-
-import matplotlib.pyplot as plt
 
 import sys
 sys.path.append("../")  
-from src.data_collection import load_details_cache, get_film_details, get_poster_url
+from src.data_collection import load_details_cache
 from src.styles import load_css
 
 load_css()
