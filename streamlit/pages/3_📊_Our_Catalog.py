@@ -175,9 +175,9 @@ bechdel__film_to_display = info_best_films(best_bechdel)
 display_films(bechdel__film_to_display)
 
 st.divider()
-st.caption("\\* Out of the 15.295 films of our catalog, we had the results of the Bechdel test for 6.605. Films that are not considered as a pass can be wether a fail or an unknown result.")
-st.caption("\\*\\* We do not have information about the Bechdel test from 2021. This does not mean there have not been films that pass this test.")
-st.caption("Bechel test is not a quality measure about a film, it is not a indicator of how feminist it is either. It is just a women representation measure.")
+st.caption("\\* Out of the 15.295 films of our catalog, we had the results of the Bechdel test for 6.605. Films that are not considered as a pass can be either a fail or an unknown result.")
+st.caption("\\*\\* We do not have information about the Bechdel test from 2021. This does not mean there have not been films that pass this test since then.")
+st.caption("Bechel test is not a quality measure about a film, it is not a indicator of how feminist it is either. It is just a measurement of women representation.")
            
 
 
