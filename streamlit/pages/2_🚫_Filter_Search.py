@@ -12,6 +12,9 @@ from src.styles import load_css
 
 load_css()
 
+BASE_DIR = Path("/Users/jorge/Documents/Data_analytics/Ironhack/Bootcamp/week8_9_final_project/WhatToWatch/streamlit/pages").resolve().parents[1]
+file_path = BASE_DIR / "data" / "visualizations" / "streamlit_data.csv"
+
 api_key = st.secrets["TMDB_API_KEY"]
 details_cache = load_details_cache()
 
@@ -34,7 +37,7 @@ st.write("Try filtering to get some ideas about movies!")
 
 def load_data():
 
-    data = pd.read_csv("../data/visualizations/streamlit_data.csv")
+    data = pd.read_csv(file_path)
 
     return data
 
