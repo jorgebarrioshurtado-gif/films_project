@@ -6,7 +6,7 @@ import os
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parents[1]
-cache_file = BASE_DIR / "data" / "processed" / "tmdb_details_cache.json"
+cache_file = BASE_DIR / "data" / "app" / "tmdb_details_cache.json"
 
 load_dotenv()
 api_key = os.getenv("TMDB_API_KEY")
